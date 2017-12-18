@@ -1,5 +1,6 @@
 # Coursera-Deep-Learning-Specialization
-Things about the DL specialization from Coursera.
+
+This repo contains notes that I took while completing Coursera's Deep Learning specialization. The approach I took while taking notes is to convert all the concepts presented in the lectures in the format of questions. 
 
 # Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization
 
@@ -147,7 +148,13 @@ Things about the DL specialization from Coursera.
 
 ### The problem of local optima
 
-1. How has the concept of local minima in the context of optimization evolved in modern deep learning? (lots of intuitions on lower dimensional spaces doesn't translate to higher dimensions; For example, local optima rarely occur in high dimensional spaces, saddle points are more likely . Derivatives are also zero in a saddle point.)
+1. How has the concept of local minima evolved in modern deep learning? (lots of intuitions on lower dimensional spaces doesn't translate to higher dimensions; For example, local optima rarely occur in high dimensional spaces, saddle points are more likely . Derivatives are also zero in a saddle point.)
 1. What is the challenge faced by optimization in deep learning? (Problem of plateau - makes learning pretty slow - Adam, RMSprop can really help speed up learning here.)
+
+## Week 3 - Hyperparameter tuning, Batch Normalization, and Programming Frameworks
+
+### Hyperparameter tuning
+
+1. 
 
 
