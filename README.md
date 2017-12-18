@@ -60,7 +60,11 @@ Things about the DL specialization from Coursera.
 1. What is the advantage and disadvantage of early stopping? (adv. = unlike L2 norm which requires multiple passes of SGD to find the hyperparameter lamda early stopping requires only 1 pass. disadv. = combines the optimization and regularization part)
 1. What is orthogonalization in the context of ML?
 
+## Setting up your optimization problem
 
+### Normalizaing inputs
+
+1. 
 
 
 
