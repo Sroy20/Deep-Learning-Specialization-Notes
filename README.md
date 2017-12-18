@@ -1,6 +1,6 @@
 # Coursera-Deep-Learning-Specialization
 
-This repo contains notes that I took while completing Coursera's Deep Learning specialization. The approach I took while taking notes is to convert all the concepts presented in the lectures in the format of questions. 
+This repository helps me in remembering the materials presented in Coursera's Deep Learning specialization. I have tried to frame the key concepts presented in each lecture as a set of questions.
 
 # Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization
 
@@ -155,6 +155,6 @@ This repo contains notes that I took while completing Coursera's Deep Learning s
 
 ### Hyperparameter tuning
 
-1. 
+1.  
 
 
