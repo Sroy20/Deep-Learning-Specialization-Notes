@@ -36,6 +36,32 @@ Things about the DL specialization from Coursera.
 
 ### Why regularization reduces overfitting?
 
+1. Intuitively why does regularization prevent overfitting? (automatic pruning of network; classicial reason of operating in the linear region of an activation function)
+1. Difference between cost function and loss. (loss is a part of CF)
+
+### Dropout regularization
+
+1. What is dropout? Why does it help in regularization?
+1. How do you implement dropout? (Inverted dropout implementation)
+1. How does backprop happen in a dropout layer?
+1. Why is the inversion with keep_prob required during training? (Reducing the computation at test time- just no dropout network is fine)
+
+### Understanding dropout
+
+1. Why does dropout work? (From the network perspective - smaller network at each iteration; from a neuron's perspective - spreading out its weights since inputs can randomly go away -> effect is shrinking the L2 norm of weights i.e. adaptive form of L2 regularization
+1. How do you choose the dropout factor for layers? (keep prob smaller for layers with more parameters i.e. layers that have more chance of overfitting)
+1. What is a downside of dropout? (cost function of J is not well-defined)
+
+### Other regularization methods
+
+1. What are other regularization tricks? (data augmentation, early stopping, 
+1. What is data augmentation and why is it used? (flip horizontal, random zooming., random rotations, distortions depending on the problem; Doesn't add much informarion but might regularize)
+1. What is early stopping and why is it used? Why does it work? (weights start from close to zero and then increases; early stopping chooses weights at the mid range)
+1. What is the advantage and disadvantage of early stopping? (adv. = unlike L2 norm which requires multiple passes of SGD to find the hyperparameter lamda early stopping requires only 1 pass. disadv. = combines the optimization and regularization part)
+1. What is orthogonalization in the context of ML?
+
+
+
 
 
 
