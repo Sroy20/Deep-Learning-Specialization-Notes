@@ -155,6 +155,8 @@ This repository helps me in remembering the materials presented in Coursera's De
 
 ### Hyperparameter tuning
 
-1.  
+#### Tuning process
+
+1. 
 
 
