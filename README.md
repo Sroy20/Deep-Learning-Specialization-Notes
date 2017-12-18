@@ -97,8 +97,57 @@ Things about the DL specialization from Coursera.
 1. Do we do grad check before training? (Yes, and also after some training epochs have passed.)
 
 
+## Week 2 - Optimization Algorithms
 
+### Mini-batch gradient descent
 
+1. What is mini-batch gradient descent? Compare it with batch gradient descent (stable but too long per iteration)? Also compare with stochastic gradient descent (very noise, doesn't converge, and loose speed up from vectorization) (Also remember this paper - https://arxiv.org/pdf/1609.04836.pdf)
+1. What are the advantages of mini-batch GD? (Can exploit vectorized implementations, more gradient descent steps than batch GD, less noisy than Stochastic GD)
+1. How to choose the size of the mini-batch? (In between 1 and m; Guidelines: If small training set (<2000) just use m i.e. batch GD, for bigger training set typical mini-batch sizes: 64, 128, 256, 512 (power of 2 since makes use of computer architecture), Make sure each minibatch fits GPU/CPU memory, mini-batch can also be a hyperparameter - explore powers of 2).
 
+### Exponentially weighted averages
+
+1. Explain the general exponential moving average formula. (V_t = beta * (V_t-1) + (1-beta) * theta_t))
+1. Approximately, how many previous steps does it average upon? (1/(1-beta))
+
+### Understanding exponentially weighted averages
+
+1. Why the name "exponentially"?
+1. What is the advantage of this technique? (Computationally efficient)
+
+### Bias correction in exponentially weighted averages
+
+1. Why is bias correction required? (Starts with zero, the estimate for initial phases are inaccurate)
+1. How is bias correction done? 
+
+### Gradient descent with momentum
+
+1. What is the core idea of this algorithm? (calculate exponentially weighted moving averages of gradients and use this to update weights)
+1. Why can't larger learning rates might sometime create problem in GD? (If oscillations happen in some directions, they would get intensified)
+1. What is the formula for this algorithm?
+1. Intuitively, why does momentum work? (oscillations are averaged out to some extent; so larger learning rates can be used -> bigger steps towards the minimum -> speeding up the optimization process.)
+1. What is a common value of beta that is used?
+
+### RMSprop
+
+1. What is the RMSprop formula? Explain it intuitively.
+1. How to add numerical stability to the RMSprop algorithm?
+1. What is the advantage of RMSprop? (Averaging out oscillations -> allows us to use a larger learning rate -> speeding up the optimization process)
+
+### Adam optimization algorithm
+
+1. What is the core idea of Adam? (Combining gradient descent with momentum and RMSprop)
+1. Write the formula.
+1. How are the hyperparameters selected for Adam? (alpha = needs to be tuned, beta_1 = 0.9, beta_2 = 0.999, ephsilon = 1e-8; typically only alpha is tuned)
+
+### Learning rate decay
+
+1. What is the intuition behind slowly reducing the learning rate decay?
+1. How to implement the learning rate decay? (staircase or formulae as a function of epoch - some of them introduce new hyperparameters)
+
+### The problem of local optima
+
+1. How has the concept of local minima in the context of optimization evolved in modern deep learning? (lots of intuitions on lower dimensional spaces doesn't translate to higher dimensions; For example, local optima rarely occur in high dimensional spaces, saddle points are more likely . Derivatives are also zero in a saddle point.)
+1. What is the challenge faced by optimization in deep learning? (Problem of plateau - makes learning pretty slow - Adam, RMSprop can really help speed up learning here.)
 
 
