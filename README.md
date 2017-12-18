@@ -64,7 +64,37 @@ Things about the DL specialization from Coursera.
 
 ### Normalizaing inputs
 
-1. 
+1. How to normalize input? (for each dimension subtract mean and dividie by std. dev., remember that test set has to see the same transformation)
+1. Why do we normalize the input data? (otherwise elongatated cost function so magnitude of weights for differnt dimensions are very dissimilar -> slower to optimize )
+1. When do we normalize the input data? (When i/p features come from very different ranges, although doing it doesn't do any harm)
+
+### Vanishing/Exploding gradients
+
+1. Explain the phenomenon in case of vanishing/exploding gradients. (explain the phenomenon and talk about why it is not very important anymore in case of feed-forward networks. But still important for RNNs.) (Very interesting read - https://medium.com/@karpathy/yes-you-should-understand-backprop-e2f06eab496b for the case of sigmoids and tanh)(It is better to talk about the classical problems first and then come to modern probelms and talk about the random block initialization paper and why it is less of an issue.)(Networks facing this problem in order of severity -> RNN, FFN w sigmoid/tanh, Mod. ReLU).
+
+
+### Weight initialization for deep networks
+
+1. How do you intialize the weight of any layer of a deep network? Why? Discuss the changes for different activation functions (ReLU and tanh).
+1. What is He intialization? Xavier intialization? Glorot and Bengio initialization? (Also an interesting paper: https://arxiv.org/pdf/1704.08863.pdf)
+
+### Numerical approximation of gradients
+
+1. Should you take a two sided difference or one sided difference while calculating gradients? (Accuracy of calculation: two-sided error is in O(ephsilon^2) whereas one-sided is in O(ephsilon). Although, two-sided is much more accurate, one-sided is faster.)
+
+### Gradient checking
+
+1. Why is gradient checking necessary?
+1. How to perform gradient checking for a neural network? (Give formula) 
+1. What is a good ballpark value of epshilon that can be used for calculating gradients?
+
+### Gradient checking implementation notes
+
+1. What to do if your algorithm fails gradient checking?
+1. Should you using grad check throughout training? If not, why not?
+1. How do you handle regularization during grad check? (IF L2 or additive regularzation just add that; but doesn't work with dropout)
+1. How do you do grad check for a neural network that has dropout? (Just turn off dropout, check and it the algo passes grad check, turn on dropout)
+1. Do we do grad check before training? (Yes, and also after some training epochs have passed.)
 
 
 
