@@ -160,3 +160,80 @@ This repository helps me in remembering the materials presented in Coursera's De
 1. 
 
 
+# Convolutional Neural Networks
+
+## Week 1 - Foundation of CNNs
+
+### Computer Vision
+
+1. What are different types of Computer Vision problems? (Image classification, object detetion, neural art transfer, etc.)
+1. What is the primary advantage of a Convolution layer? (for bigger real-world images -> lesser parameters -> reduce chance of overfitting and computationally feasible)
+
+### Edge detection example
+
+1. Intuitively explain what features do progressive layers of a neural network extract? (gradually higher level features: edges, parts of objecte, etc.)
+1. Describe the forward convolution operation.
+1. Can you explain for a convolution layer works as a edge detector? (vertical edge detector)
+
+### More edge detection
+
+1. How to detect dark-to-bright and bright-to-dark vertical edges?
+1. Construct a simple vertical edge detector. Now construct a simple horizontal edge detector.
+1. What is a Sobel filter? (more weight on the central element on first and third column)
+1. What is a Scharr filter?
+1. What do we not use hand-coded filters anymore? (train them using back-propagation, better chance of capturing the statistics of the data; also can learn slanted edge detectors)
+
+### Padding
+
+1. If image size is nxn and filter size is fxf, what is the dimension of the output image?
+1. What are the problems of the shrinking output size? (pixels around the edges of the input don't get convolved much i.e. some information is thrown away; for deeper layers it is difficult to keep track)
+1. How to solve the above problem? (Padding)
+1. How to calculate how many pixels to pad on each side of the input?
+1. What is the meaning of "valid" and "same" convolution in padding?
+1. Why is the filter dimension _f_ typically odd in Computer Vision? (1. the padding _p = (f-1)/2_ is symmetric; 2. filter has a central position)
+
+### Strided convolutions
+
+1. When input size is nxn, filter size fxf, padding of p is done on all sides, and stride is s, what is the size of the output image?
+1. Cross correlation vs. convolution in math vs. deep learning? (No horizontal and vertical flipping before point-wise multiplication)
+
+### Convolutions over volume
+
+1. How does convolution over volume work? If your input is 6x6x3 and filter is 3x3x3, what is the output size? (4x4)
+1. What does each filter learn? (a particular type of edge detector feature)
+
+### One layer of a convolutional neural network
+
+1. Where and how is bias added to a CNN?
+1. Why is a convolution layer less prone to overfitting?
+1. For a convolutional layer _l_ write all the relevant equations for forward pass.
+
+### Simple convolutional network example
+
+1. What are the different types of layers in a convolutional neural network?
+
+### Pooling layers
+
+1. What are the advantages of pooling layers? (1. reduces size of representation to speed up computation 2. makes some of the features it detects a bit more robust)
+1. What is max-pooling? What is average-pooling? Which one is more used? In what context is average-pooling still used?
+1. What is the size of the output of a max-pooling layer?
+1. How does backprop in the pooling layers?
+
+### CNN Example
+
+1. How to count the number of layers in a CNN? (two school of thoughts: number of trainable layers or all)
+
+### Why convolutions?
+
+1. What are the advantages of convolutional layers? (1. parameter sharing - a feature detector that is useful in one part of the image might also be useful in other parts 2. sparsity of connections - each output value depends on only a small number of inputs, less prone to overfitting 3. Translation invariance)
+2. 
+
+
+
+
+
+
+
+
+
+
