@@ -1,5 +1,3 @@
-# Coursera-Deep-Learning-Specialization
-
 This repository helps me in remembering the materials presented in Coursera's Deep Learning specialization. I have tried to frame the key concepts presented in each lecture as a set of questions.
 
 # Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization
@@ -181,6 +179,15 @@ This repository helps me in remembering the materials presented in Coursera's De
 1. What is the high level idea of BNORM? (We know that normalizing inputs makes learning faster because it changes the contours to a more round-ish shape. BNORM extends this idea of all layers.)
 1. Should you normalize the output of activation or normalize before the activation layer? (Debate - but before activation is much more often)
 1. Write the BNORM formula. (First convert to zero mean and std. dev. of 1, then add hyperparameters gamma and beta to learn the mean and std. dev. -> this makes the mean and std. dev. learnable) (Automatically learns the range in which the data to put into)
+
+#### Fitting batch norm into a neural network
+
+1. Draw the signal flow graph of a NN with BNORM along with proper hyperparameters.
+1. Can we remove the biases for layers that we are using BNORM? (Yes. the first step of BNORM is to subtract the mean, that automatically cancels any constant (bias) added. So while using BNORM, biases can be permanently set to zeros.)
+1. How do you implement gradient descent with BNORM?
+
+#### Why does batch normalization work?
+
 1. 
 
 
