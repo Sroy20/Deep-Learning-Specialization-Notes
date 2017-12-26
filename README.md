@@ -198,9 +198,29 @@ This repository helps me in remembering the materials presented in Coursera's De
 
 ### Multi-class classification
 
-1. What is softmax? (Generalization of sigmoid for multi-classes)
-1. 
+#### Softmax Regression
 
+1. What is softmax? (Generalization of logistic regression for multi-classes; converts to probabilities)
+1. What is the softmax formula?
+1. What is the difference of softmax compared to other activation functions? (Softmax works on a layer whereas other activations work point- or neuron-wise)
+
+#### Training a softmax classifier
+
+1. Softmax vs hardmax?
+1. During training a softmax layer, what is the loss function used? What is the cost function?
+1. How backprop works in the softmax layer? (https://math.stackexchange.com/questions/945871/derivative-of-softmax-loss-function)
+
+### Introduction to programming frameworks
+
+#### Deep learning frameworks
+
+1. What are the criteria to choose a software (easy of development and deployment, how large models are handled, truly open source i.e. open source with good governance)
+
+#### TensorFlow
+
+1. What is a placeholder in TensorFlow? What is its difference with Variable?
+1. Why is the "with" command used for running a session? (Better handles exceptions in the inner loop)
+1. What is a computation graph?
 
 
 # Convolutional Neural Networks
