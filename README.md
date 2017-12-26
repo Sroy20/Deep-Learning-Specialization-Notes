@@ -159,8 +159,29 @@ This repository helps me in remembering the materials presented in Coursera's De
 
 1. What are some of the hyperparameters used in deep learning? (learning rate alpha, momentum beta, Adam optimization hparameters, # layers, # units in layers, learning rate decay, mini-batch size; Acc. to Andrew Ng the most important parameter to tune is alpha, followed by beta, mini-batch-size, and # hidden units; next comes # layers and learning rate decay. Adam hparameters beta_1, beta_2 and ephsilon are almost never tuned)
 1. How to select values of hyperparameters to explore? 
-1. Why is grid search better than random search?
+1. Why is grid search better than random search? (Random search -> Consider a two hyperparameters situation -> If one of them doesn't affect the performance much, then ideally in a nxn grid search only n values of the other one has been explored and this means effectively only n points in total have been explored)
+1. What is coarse-to-fine sampling scheme?
 
+#### Using an appropriate scale to pick hyperparameters
+
+1. How do you choose the range of hyperparameter exploration? (Depends on the sensitivty of performance on the hyperparameter at hand; # units in hidden layers (can be searched in a linear scale), learning rate (searched in a logarithmic scale))
+1. What can be a range to search the # hidden units or # hidden layers and how to search in that range?
+1. What can be a range to search the learning rate alpha and how to search in that range?
+1. What can be a range to search the momentum term beta and how to search in that range? (Change to 1 - beta and repeat process for above)
+
+#### Hyperparameters tuning in practice: Pandas vs Caviar
+
+1. In general, what are two ways to choose hyperparameters? (babysit one model or try multiple models in parallel)
+
+### Batch Normalization
+
+#### Normalizing activations in a network
+
+1. What are the advantages of BNORM? (makes hyperparameter search much easier, makes neural network much robust to the choice of hyperparameters -> networks tend to perform well for a wide range of hyperparameters, makes training of deeper networks easier)
+1. What is the high level idea of BNORM? (We know that normalizing inputs makes learning faster because it changes the contours to a more round-ish shape. BNORM extends this idea of all layers.)
+1. Should you normalize the output of activation or normalize before the activation layer? (Debate - but before activation is much more often)
+1. Write the BNORM formula. (First convert to zero mean and std. dev. of 1, then add hyperparameters gamma and beta to learn the mean and std. dev. -> this makes the mean and std. dev. learnable) (Automatically learns the range in which the data to put into)
+1. 
 
 
 
@@ -230,7 +251,7 @@ This repository helps me in remembering the materials presented in Coursera's De
 ### Why convolutions?
 
 1. What are the advantages of convolutional layers? (1. parameter sharing - a feature detector that is useful in one part of the image might also be useful in other parts 2. sparsity of connections - each output value depends on only a small number of inputs, less prone to overfitting 3. Translation invariance)
-2. 
+1. 
 
 
 
