@@ -188,7 +188,15 @@ This repository helps me in remembering the materials presented in Coursera's De
 
 #### Why does batch normalization work?
 
-1. Why batch norm works? (Reason 1: Scaling of different dimensions to the same range thereby making the optimization contonours more rounded. Reason 2: )
+1. Why batch norm works? (Reason 1: Scaling of different dimensions to the same range thereby making the optimization contours more rounded. Reason 2: makes later layers more robust to weight changes in the earlier layers. The later layers face covriate shift. The values of their input changes during training. BNORM at least keept their mean and std. dev. constant. Reason 3. Regularization effect. Since mean and std. dev. is calculated on a mini-batch, it is noisy. This adds some noise on the hidden layer output. BNORM offers both multiplicative and additive noise. Note that in contrast, dropout only adds multiplicative noise but it is much more powerful. Increasing the mini-batch size decreases the regularizing effect.)
+1. What is covariate shift? (If we learn X-> y, then if the input or output changes then the classifier has to be retrained.)
+
+#### Batch norm at test time
+
+1. Why can't we employ the same method mini-batch method for testing?
+1. How do you handle batch norm during test time? (Get an estimate of mean and variance by keeping an exponentially weighted average of the means and variance calculated from all the mini-batches) 
+
+### Multi-class classification
 
 
 
