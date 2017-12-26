@@ -198,6 +198,9 @@ This repository helps me in remembering the materials presented in Coursera's De
 
 ### Multi-class classification
 
+1. What is softmax? (Generalization of sigmoid for multi-classes)
+1. 
+
 
 
 # Convolutional Neural Networks
