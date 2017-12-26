@@ -176,7 +176,7 @@ This repository helps me in remembering the materials presented in Coursera's De
 #### Normalizing activations in a network
 
 1. What are the advantages of BNORM? (makes hyperparameter search much easier, makes neural network much robust to the choice of hyperparameters -> networks tend to perform well for a wide range of hyperparameters, makes training of deeper networks easier)
-1. What is the high level idea of BNORM? (We know that normalizing inputs makes learning faster because it changes the contours to a more round-ish shape. BNORM extends this idea of all layers.)
+1. What is the high level idea of BNORM? (We know that normalizing inputs makes learning faster because it changes the contours to a more round-ish shape by enforcing input dimensions to be in similar range. BNORM extends this idea of all layers.)
 1. Should you normalize the output of activation or normalize before the activation layer? (Debate - but before activation is much more often)
 1. Write the BNORM formula. (First convert to zero mean and std. dev. of 1, then add hyperparameters gamma and beta to learn the mean and std. dev. -> this makes the mean and std. dev. learnable) (Automatically learns the range in which the data to put into)
 
@@ -188,7 +188,7 @@ This repository helps me in remembering the materials presented in Coursera's De
 
 #### Why does batch normalization work?
 
-1. 
+1. Why batch norm works? (Reason 1: Scaling of different dimensions to the same range thereby making the optimization contonours more rounded. Reason 2: )
 
 
 
