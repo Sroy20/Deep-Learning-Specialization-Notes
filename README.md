@@ -157,7 +157,11 @@ This repository helps me in remembering the materials presented in Coursera's De
 
 #### Tuning process
 
-1. 
+1. What are some of the hyperparameters used in deep learning? (learning rate alpha, momentum beta, Adam optimization hparameters, # layers, # units in layers, learning rate decay, mini-batch size; Acc. to Andrew Ng the most important parameter to tune is alpha, followed by beta, mini-batch-size, and # hidden units; next comes # layers and learning rate decay. Adam hparameters beta_1, beta_2 and ephsilon are almost never tuned)
+1. How to select values of hyperparameters to explore? 
+1. Why is grid search better than random search?
+
+
 
 
 # Convolutional Neural Networks
