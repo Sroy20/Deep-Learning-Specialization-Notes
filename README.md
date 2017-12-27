@@ -350,8 +350,26 @@ Table of Contents
 
 ### Why convolutions?
 
-1. What are the advantages of convolutional layers? (1. parameter sharing - a feature detector that is useful in one part of the image might also be useful in other parts 2. sparsity of connections - each output value depends on only a small number of inputs, less prone to overfitting 3. Translation invariance)
+1. What are the advantages of convolutional layers? (1. parameter sharing - a feature detector that is useful in one part of the image might also be useful in other parts 2. sparsity of connections - each output value depends on only a small number of inputs, less prone to overfitting 3. Translation invariance - image shifted a few pixels give rise to the same features)
+
+## Week 2 - Case Studies
+
+### Why look at case studies?
+
+1. What are some classic (LeNet, AlexNet, VGG) and modern (ResNet, Inception) important networks?
+
+### Classic Networks
+
+1. What is local response normalization? (Not used today)
+1. What is the key contribution of LeNet-5? 
+1. What is the key contribution of AlexNet?
+1. What is the key contribution of ResNet? (All filters 3x3. nH and nW decreases by a factor of 2 and nC increases by a factor of 2)
+
+### ResNets
+
 1. 
+
+
 
 
 
