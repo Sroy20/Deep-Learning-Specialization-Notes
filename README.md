@@ -26,7 +26,7 @@ This repository helps me in remembering the materials presented in Coursera's De
 
 1. What is L2 regularization? 
 1. Do we have to regularize both weights are biases? (For each neuron, most parameters are in the weight vector since it's high dimensional. So regularizing bias is not required. Can be omitted.)
-1. What is the L1 regularization? What are the consequences? (sparse network - most weights zero) When is it typically used? (compressing neural networks, but doesn't work much in pratice)
+1. What is the L1 regularization? What are the consequences? (sparse network - most weights zero) When is it typically used? (compressing neural networks, but doesn't work much in pratice.)
 1. What is the regularization parameter? How do you set it? (another hyperparameter - so use dev set)
 1. What is the formula for L2 regularization for a multi-layer neural network?
 1. What is Frobenius norm? (L2 norm of a matrix; basically sum of squares of all elements)
