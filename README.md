@@ -53,6 +53,7 @@
 
 
 
+
 # Course 2: Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization
 
 ## Week 1 - Practical Aspects of Deep Learning
