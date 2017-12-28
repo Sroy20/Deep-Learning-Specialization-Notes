@@ -62,7 +62,21 @@ Table of Contents
     * [CNN Example](#cnn-example)
     * [Why convolutions?](#why-convolutions)
 
-# Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization
+# Course 1: Neural Networks and Deep Learning
+
+## Week 2: Neural Network Basics
+
+### Logistic Regression as a Neural Network
+
+#### Binary classification
+
+1. How do you stack the training examples (x<sup>(i)</sup>, y<sup>(i)</sup>) to form X and Y? (X.shape = (n<sup>x</sup>, m) and Y.shape = (1, m) -> makes Python coding easier)
+
+#### Logistic regression
+
+1. 
+
+# Course 2: Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization
 
 ## Week 1 - Practical Aspects of Deep Learning
 
@@ -361,12 +375,13 @@ Table of Contents
 ### Classic Networks
 
 1. What is local response normalization? (Not used today)
-1. What is the key contribution of LeNet-5? 
-1. What is the key contribution of AlexNet?
-1. What is the key contribution of ResNet? (All filters 3x3. nH and nW decreases by a factor of 2 and nC increases by a factor of 2)
+1. What was the key contribution of LeNet-5? 
+1. What was the key contribution of AlexNet?
+1. What was the key contribution of ResNet? (All filters 3x3. nH and nW decreases by a factor of 2 and nC increases by a factor of 2)
 
 ### ResNets
 
+1. What is the key idea of ResNets?
 1. 
 
 
