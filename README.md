@@ -49,6 +49,26 @@
 
 #### Gradient descent on _m_ examples
 
+1. How do you extend the weight update formulae obtained from one training example to multiple? (Average of all dws)
+
+### Python and Vectorization
+
+#### Vectorization
+
+1. What is vectorization and why is it necessary? (Art of getting rid of explicit for loops in the code; increases computational efficiency)
+1. What is SIMD? (Single instruction, Multiple Data -> helps GPUs/CPUs in parallelization)
+
+#### More vectorization examples
+
+1. How do you vectorize the parameter updates in logistic regression?
+
+#### Vectorizing logistic regression
+
+1. Write the vectorziation equation for the forward path of logistic regression.
+
+#### Vectrozing logistic regression's gradient path
+
+
 
 
 
