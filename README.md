@@ -1,67 +1,3 @@
-This repository helps me in remembering the materials presented in Coursera's Deep Learning specialization. I have tried to frame the key concepts presented in each lecture as a set of questions.
-
-Table of Contents
-=================
-
-* [Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization](#improving-deep-neural-networks-hyperparameter-tuning-regularization-and-optimization)
-  * [Week 1 \- Practical Aspects of Deep Learning](#week-1---practical-aspects-of-deep-learning)
-    * [Setting up your Machine Learning Application](#setting-up-your-machine-learning-application)
-      * [Train/Dev/Test sets](#traindevtest-sets)
-      * [Bias/Variance](#biasvariance)
-      * [Basic recipe for Machine Learning](#basic-recipe-for-machine-learning)
-    * [Regularizing your neural network](#regularizing-your-neural-network)
-      * [Regularization](#regularization)
-    * [Why regularization reduces overfitting?](#why-regularization-reduces-overfitting)
-    * [Dropout regularization](#dropout-regularization)
-    * [Understanding dropout](#understanding-dropout)
-    * [Other regularization methods](#other-regularization-methods)
-  * [Setting up your optimization problem](#setting-up-your-optimization-problem)
-    * [Normalizaing inputs](#normalizaing-inputs)
-    * [Vanishing/Exploding gradients](#vanishingexploding-gradients)
-    * [Weight initialization for deep networks](#weight-initialization-for-deep-networks)
-    * [Numerical approximation of gradients](#numerical-approximation-of-gradients)
-    * [Gradient checking](#gradient-checking)
-    * [Gradient checking implementation notes](#gradient-checking-implementation-notes)
-  * [Week 2 \- Optimization Algorithms](#week-2---optimization-algorithms)
-    * [Mini\-batch gradient descent](#mini-batch-gradient-descent)
-    * [Exponentially weighted averages](#exponentially-weighted-averages)
-    * [Understanding exponentially weighted averages](#understanding-exponentially-weighted-averages)
-    * [Bias correction in exponentially weighted averages](#bias-correction-in-exponentially-weighted-averages)
-    * [Gradient descent with momentum](#gradient-descent-with-momentum)
-    * [RMSprop](#rmsprop)
-    * [Adam optimization algorithm](#adam-optimization-algorithm)
-    * [Learning rate decay](#learning-rate-decay)
-    * [The problem of local optima](#the-problem-of-local-optima)
-  * [Week 3 \- Hyperparameter tuning, Batch Normalization, and Programming Frameworks](#week-3---hyperparameter-tuning-batch-normalization-and-programming-frameworks)
-    * [Hyperparameter tuning](#hyperparameter-tuning)
-      * [Tuning process](#tuning-process)
-      * [Using an appropriate scale to pick hyperparameters](#using-an-appropriate-scale-to-pick-hyperparameters)
-      * [Hyperparameters tuning in practice: Pandas vs Caviar](#hyperparameters-tuning-in-practice-pandas-vs-caviar)
-    * [Batch Normalization](#batch-normalization)
-      * [Normalizing activations in a network](#normalizing-activations-in-a-network)
-      * [Fitting batch norm into a neural network](#fitting-batch-norm-into-a-neural-network)
-      * [Why does batch normalization work?](#why-does-batch-normalization-work)
-      * [Batch norm at test time](#batch-norm-at-test-time)
-    * [Multi\-class classification](#multi-class-classification)
-      * [Softmax Regression](#softmax-regression)
-      * [Training a softmax classifier](#training-a-softmax-classifier)
-    * [Introduction to programming frameworks](#introduction-to-programming-frameworks)
-      * [Deep learning frameworks](#deep-learning-frameworks)
-      * [TensorFlow](#tensorflow)
-* [Convolutional Neural Networks](#convolutional-neural-networks)
-  * [Week 1 \- Foundation of CNNs](#week-1---foundation-of-cnns)
-    * [Computer Vision](#computer-vision)
-    * [Edge detection example](#edge-detection-example)
-    * [More edge detection](#more-edge-detection)
-    * [Padding](#padding)
-    * [Strided convolutions](#strided-convolutions)
-    * [Convolutions over volume](#convolutions-over-volume)
-    * [One layer of a convolutional neural network](#one-layer-of-a-convolutional-neural-network)
-    * [Simple convolutional network example](#simple-convolutional-network-example)
-    * [Pooling layers](#pooling-layers)
-    * [CNN Example](#cnn-example)
-    * [Why convolutions?](#why-convolutions)
-
 # Course 1: Neural Networks and Deep Learning
 
 ## Week 2: Neural Network Basics
@@ -74,7 +10,20 @@ Table of Contents
 
 #### Logistic regression
 
-1. 
+1. Formulate the logistic regression problem.
+1. Should the bias term be kept separate or added as one of weight parameters?
+
+#### Logistic regression cost function
+
+1. What is loss function? (defined on one training example) 
+1. What is cost function? (average of the losses over all training examples)
+1. Why is the squared error not use in case of logistic regression? (makes the optimization problem non-convex -> difficult for GD)
+1. What is the logistic regression loss function? Why use this form? 
+1. What is the logistic regression cost function?
+
+#### Gradient descent
+
+
 
 # Course 2: Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization
 
