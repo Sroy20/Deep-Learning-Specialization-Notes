@@ -23,6 +23,34 @@
 
 #### Gradient descent
 
+1. On a high-level how does GD work? (talk about derivate, slope, and direction of steepest descent)
+
+#### Derivatives
+
+1. Mathematically what is derivative? (Slope i.e. how does a small increment in x affect y)
+
+#### More derivatives
+
+1. What is derivative of log(a)?
+
+#### Computation graph
+
+1. What is a computation graph? (Defining the forward path of a network in terms of basic computational blocks. Comes in handy when we trying to optimize a function for example J. left to right path for calculating the value of the function J and right to left path for calculating the derivatives)
+
+#### Derivatives of a computation graph
+
+1. How to find the derivates of J with respect to the intermediate variables in a computation graph?
+1. What is a proper way to denote the derivatives of _J_ with respect to some variable intermediate _var_ in Python? (_dvar_ since we typically are __always__ interested in finding the derivate of _J_ and hence we drop it)
+
+#### Logistic regression gradient descent
+
+1. What is the computation graph for logistic regression?
+1. Derive the derivatives at each point of the computation graph. From this derive the gradient descent formulae for logistic regression.
+
+#### Gradient descent on _m_ examples
+
+
+
 
 
 # Course 2: Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization
