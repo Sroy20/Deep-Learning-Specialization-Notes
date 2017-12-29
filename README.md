@@ -68,6 +68,33 @@
 
 #### Vectrozing logistic regression's gradient path
 
+1. Derive the vectorized gradient update formulae for logistic regression.
+
+#### Broadcasting in Python
+
+1. What is broadcasting? What are the advantages? (The term broadcasting describes how numpy treats arrays with different shapes during arithmetic operations. Subject to certain constraints, the smaller array is “broadcast” across the larger array so that they have compatible shapes. Broadcasting provides a means of vectorizing array operations so that looping occurs in C instead of Python. It does this without making needless copies of data and usually leads to efficient algorithm implementations. ) 
+1. What is the general principle of broadcasting? 
+
+#### A note on Python/Numpy vectors
+
+1. Should you use (n,) i.e. rank 1 array in Python? (No - bugs might come in. better to use reshape to get (n,1). Matrix multiplications are easier to predict.)
+1. What is the need of assert statement during coding neural networks? (Assert to double-check shape of matrices)
+
+#### Quick tour of Jupyter Notebooks
+
+1. Standard stuff
+
+#### Explanation of logistic regression cost function
+
+1. How do you get the logistic regression cost function?
+1. Why take log? (Simplication because converts to summation and monotonically increasing)
+1. How does the minus come in the loss function?
+1. What is maximal likelihood estimation?
+1. What is the assumption for doing this? (Input training examples are IID)
+
+
+
+
 
 
 
