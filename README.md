@@ -391,20 +391,22 @@
 
 1. What are the advantages of convolutional layers? (1. parameter sharing - a feature detector that is useful in one part of the image might also be useful in other parts 2. sparsity of connections - each output value depends on only a small number of inputs, less prone to overfitting 3. Translation invariance - image shifted a few pixels give rise to the same features)
 
-## Week 2 - Case Studies
+## Week 2 - Deep convolutional models: case studies
 
-### Why look at case studies?
+### Case studies
+
+#### Why look at case studies?
 
 1. What are some classic (LeNet, AlexNet, VGG) and modern (ResNet, Inception) important networks?
 
-### Classic Networks
+#### Classic Networks
 
 1. What is local response normalization? (Not used today)
 1. What was the key contribution of LeNet-5? 
 1. What was the key contribution of AlexNet?
 1. What was the key contribution of ResNet? (All filters 3x3. nH and nW decreases by a factor of 2 and nC increases by a factor of 2)
 
-### ResNets
+#### ResNets
 
 1. What is the key idea of ResNets?
 1. Describe the concept of skip connection. What is a residual block? 
@@ -414,26 +416,26 @@
 
 Read [this](https://arxiv.org/abs/1512.03385) paper.
 
-### Why ResNets work
+#### Why ResNets work
 
 1. Why does ResNet work? (If the activation is ReLU, then it is easy for the ResNet to learn the identity function. Therefore adding more layer doesn't affect adversely. Either it helps or if not, then just the identity function is learnt. In contrast, it is difficult for "plain networks" to learn identity functions.)
 1. In context of ResNets why is typically "same" convolution used? (To avoid dimension mismatches)
 1. What happens when there is a dimension mismatch during the addition operation in ResNets? (Typically a matrix is used (pre-multiplied with a<sup>\[l]</sup>) - can be learnt or fixed implementing zero padding)
 1. How do we handle the presence of pooling layer in a residual block since it will lead to a dimension mismatch? (same as above)
 
-### Networks in Networks and 1x1 convolutions
+#### Networks in Networks and 1x1 convolutions
 
 1. Explain the concept of NIN or 1x1 convolutions.
 1. How is it different from a fully connected layer?
 1. Where is it typically used? (1. If the network depth has become huge then NIN can be used to shrink it. In contrast, the height and width of the volume is reduced by pooling layers or convs with strides >1. 2. Even if the output volume has same or more depth, it adds another level of nonlinearities to be learnt thereby increasing the model complexity.)
 
-### Inception network motivation
+#### Inception network motivation
 
 1. What is the key motivation behind inception networks? (Allows to explore different filter configurations at once and then concatenate the results)
 1. What is a "bottleneck layer"? (Describe the problem of computation cost (Eg. 28x28x192 -> 28x28x32 for 64@5x5) and then say how 1x1 convolutions (Eg. 28x28x192 -> 28x28x16 for 16@1x1 -> 28x28x32 for 32@5x5) can be used to reduce it)
 1. Does the "bottlenect layer" hurt performance of a network? (No, if shrinking is done withing reason)
 
-### Inception Network
+#### Inception Network
 
 1. What is an inception module? Describe the reason for each element of the blocks.
 1. Why are the 1x1 convolution layers present in the module? (bottleneck layers to reduce computation cost)
@@ -442,6 +444,38 @@ Read [this](https://arxiv.org/abs/1512.03385) paper.
 1. Why are there are some side branches in the inception network? (Tries to perform prediction based on intermediate features -> can be used to detect overfitting)
 
 Read [this](https://arxiv.org/abs/1409.4842) and [this](https://arxiv.org/abs/1602.07261).
+
+### Practical advices for using ConvNets
+
+#### Using open-source implementation
+
+1. Use Github
+
+#### Transfer learning
+
+1. How to do transfer learning on smaller data? (Get a model trained on similar data. Freeze the conv layers i.e. the feature detector layers and train the fully connected layer)
+1. How to make transfer learning faster? (Since the first series of layers are fixed. Pre-compute this on the input data and save to disk. Then using this to train a softmax regression.)
+1. How to do transfer learning on mid-sized? (Freeze fewer layers. The trainable layers can be trained from scratch or the trained weights can be used as initialzer. With more data, the number of layers to freeze weill decrease.)
+1. How to do transfer learning on large datasets? (Unfreeze all layers. Treat trained weights as initializer and then do gradient descent. The final softmax layer has to be adjusted based on the number of classes.)
+
+#### Data augmentation
+
+1. What is the motivation behind data augmentation?
+1. What are some common data augmentation techniques? (Mirroring, Random cropping are two most common. Not so common ones are Rotation, Shearing, Local Warping, etc. Other techniques are color shifting, )
+1. What is color shifting? (Changing R, G, and B color randomly taken from a narrow distribution. Making robust to changes in the colors such as due to sunlight, night, etc.)
+1. How to do color augmentation? (PCA color augmentation - keeps the overall color/tint the same. If the image has more R and B than G, then it will more change R and B.)
+1. How to implement distortions during training? (Data kept in hard-disk. While loading data, distortions are done by a few CPU threads and then passed on as a batch. Training on batch and performing of distortions on another batch can be done in parallel to increase computational efficiency.)
+
+#### State of computer vision
+
+1. When to do hand-engineering features?
+1. What to do when dataset is smaller? (transfer learning or feature engineering)
+1. What are some techniques to do well benchmarks (probably can't be used in a production context)? (Ensembles, Multi-crop at test time, etc.)
+1. What is ensembling? (Train several networks independently and average their outputs)
+1. What is the 10-crop technique? (Run classifier on multiple  versions of test images and average results)
+
+
+
 
 
 
