@@ -412,6 +412,8 @@
 1. From where does the "short-cut" path start and where does it connects to? (After a ReLU and before another ReLU layer in the later part of the network)
 1. What is the primary advantage of ResNets? (Allows training of very deep architectures without any gradient explosion/vanishing. For a "plain network" the training error decreases and then increases with the number of layers.)
 
+Read [this](https://arxiv.org/abs/1512.03385) paper.
+
 ### Why ResNets work
 
 1. Why does ResNet work? (If the activation is ReLU, then it is easy for the ResNet to learn the identity function. Therefore adding more layer doesn't affect adversely. Either it helps or if not, then just the identity function is learnt. In contrast, it is difficult for "plain networks" to learn identity functions.)
@@ -438,6 +440,8 @@
 1. Why does the max-pool layer have a stride of 1? (To keep dimensions consistent with its parallel layers for channel concatenation of output volumes)
 1. What is an inception network? (Brings a bunch of inception modules)
 1. Why are there are some side branches in the inception network? (Tries to perform prediction based on intermediate features -> can be used to detect overfitting)
+
+Read [this](https://arxiv.org/abs/1409.4842) and [this](https://arxiv.org/abs/1602.07261).
 
 
 
