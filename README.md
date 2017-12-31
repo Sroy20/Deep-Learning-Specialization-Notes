@@ -419,6 +419,27 @@
 1. What happens when there is a dimension mismatch during the addition operation in ResNets? (Typically a matrix is used (pre-multiplied with a<sup>\[l]</sup>) - can be learnt or fixed implementing zero padding)
 1. How do we handle the presence of pooling layer in a residual block since it will lead to a dimension mismatch? (same as above)
 
+### Networks in Networks and 1x1 convolutions
+
+1. Explain the concept of NIN or 1x1 convolutions.
+1. How is it different from a fully connected layer?
+1. Where is it typically used? (1. If the network depth has become huge then NIN can be used to shrink it. In contrast, the height and width of the volume is reduced by pooling layers or convs with strides >1. 2. Even if the output volume has same or more depth, it adds another level of nonlinearities to be learnt thereby increasing the model complexity.)
+
+### Inception network motivation
+
+1. What is the key motivation behind inception networks? (Allows to explore different filter configurations at once and then concatenate the results)
+1. What is a "bottleneck layer"? (Describe the problem of computation cost (Eg. 28x28x192 -> 28x28x32 for 64@5x5) and then say how 1x1 convolutions (Eg. 28x28x192 -> 28x28x16 for 16@1x1 -> 28x28x32 for 32@5x5) can be used to reduce it)
+1. Does the "bottlenect layer" hurt performance of a network? (No, if shrinking is done withing reason)
+
+### Inception Network
+
+1. What is an inception module? Describe the reason for each element of the blocks.
+1. Why are the 1x1 convolution layers present in the module? (bottleneck layers to reduce computation cost)
+1. Why does the max-pool layer have a stride of 1? (To keep dimensions consistent with its parallel layers for channel concatenation of output volumes)
+1. What is an inception network? (Brings a bunch of inception modules)
+1. Why are there are some side branches in the inception network? (Tries to perform prediction based on intermediate features -> can be used to detect overfitting)
+
+
 
 
 
