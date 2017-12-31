@@ -407,7 +407,17 @@
 ### ResNets
 
 1. What is the key idea of ResNets?
-1. 
+1. Describe the concept of skip connection. What is a residual block? 
+1. Write the equations for a residual block?
+1. From where does the "short-cut" path start and where does it connects to? (After a ReLU and before another ReLU layer in the later part of the network)
+1. What is the primary advantage of ResNets? (Allows training of very deep architectures without any gradient explosion/vanishing. For a "plain network" the training error decreases and then increases with the number of layers.)
+
+### Why ResNets work
+
+1. Why does ResNet work? (If the activation is ReLU, then it is easy for the ResNet to learn the identity function. Therefore adding more layer doesn't affect adversely. Either it helps or if not, then just the identity function is learnt. In contrast, it is difficult for "plain networks" to learn identity functions.)
+1. In context of ResNets why is typically "same" convolution used? (To avoid dimension mismatches)
+1. What happens when there is a dimension mismatch during the addition operation in ResNets? (Typically a matrix is used (pre-multiplied with a<sup>\[l]</sup>) - can be learnt or fixed implementing zero padding)
+1. How do we handle the presence of pooling layer in a residual block since it will lead to a dimension mismatch? (same as above)
 
 
 
