@@ -92,6 +92,15 @@
 1. What is maximal likelihood estimation?
 1. What is the assumption for doing this? (Input training examples are IID)
 
+## Week 3 - Shallow neural networks
+
+### Shallow neural network
+
+#### Neural Networks overview
+
+
+
+
 
 
 
