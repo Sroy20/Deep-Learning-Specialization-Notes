@@ -17,7 +17,7 @@
 
 1. What is loss function? (defined on one training example) 
 1. What is cost function? (average of the losses over all training examples)
-1. Why is the squared error not use in case of logistic regression? (makes the optimization problem non-convex -> difficult for GD)
+1. Why is the squared error not use in case of logistic regression? (1. makes the optimization problem non-convex -> difficult for GD 2. As a surrogate loss MSE is not close to 0/1 or accuracy loss. Cross-entropy or hinge loss are the closest.)
 1. What is the logistic regression loss function? Why use this form? 
 1. What is the logistic regression cost function?
 
